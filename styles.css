@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Logo styling */
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Italianno", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 100px;
+  padding: 1rem 0;
+  color: #a86060;
+}
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffcaca;
+  padding: 0.8rem 3rem;
+  margin: 0 auto 3rem auto;
+  max-width: 900px;
+  border-radius: 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation links container */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 3.5rem;
+}
+
+/* Individual links */
+.nav-links a {
+  text-decoration: none;
+  color: rgb(155, 60, 60);
+  font-size: 18px;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+/* Hover effect */
+.nav-links a:hover {
+  color: #ff0000;
+}
+
+/* Product wrapper - contains everything */
+.product-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  flex: 1;
+}
+
+/* Container - Image and Product Info side by side */
+.container {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+/* Image container - Left side */
+.image {
+  flex: 0 0 450px;
+  max-width: 450px;
+}
+
+/* Actual image element */
+.image img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Product details - Right side */
+.product-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Title/Heading */
+.Title {
+  margin: 0;
+}
+
+.Heading {
+  font-size: 3rem;
+  color: #333;
+  line-height: 1.2;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Description */
+.description p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #666;
+  margin: 0;
+}
+
+/* Pricing */
+.Pricing p {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ff6b9d;
+  margin: 0;
+}
+
+/* Buy Now Button */
+.Buynow a {
+  display: inline-block;
+  background-color: #ffcaca;
+  color: rgb(155, 60, 60);
+  padding: 1rem 3rem;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255, 202, 202, 0.4);
+  align-self: flex-start;
+}
+
+.Buynow a:hover {
+  background-color: #ff6b9d;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(255, 107, 157, 0.4);
+}
+
+/* Bullet Points - Full width at bottom */
+.Bulletpoints {
+  background-color: #fff5f7;
+  padding: 2rem;
+  border-radius: 10px;
+  border-left: 4px solid #ffcaca;
+  width: 100%;
+}
+
+.Bulletpoints p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.Bulletpoints ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  gap: 1.5rem;
+}
+
+.Bulletpoints li {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.8;
+  padding-left: 1.5rem;
+  position: relative;
+  flex: 0 0 calc(50% - 0.75rem);
+}
+
+/* Custom bullet points */
+.Bulletpoints li::before {
+  content: "•";
+  color: #ff6b9d;
+  font-weight: bold;
+  font-size: 1.5rem;
+  position: absolute;
+  left: 0;
+}
+
+/* Footer styling */
+.footer {
+  background-color: #ffcaca;
+  padding: 2rem;
+  text-align: center;
+  margin-top: 3rem;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.footer p {
+  color: rgb(155, 60, 60);
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Responsive design */
+@media (max-width: 968px) {
+  .container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .image {
+    flex: 1;
+    max-width: 100%;
+  }
+  
+  .Heading {
+    font-size: 2.5rem;
+  }
+  
+  .Pricing p {
+    font-size: 2.5rem;
+  }
+  
+  .Bulletpoints li {
+    flex: 0 0 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo {
+    font-size: 60px;
+  }
+  
+  .navbar {
+    max-width: 90%;
+    padding: 0.6rem 1.5rem;
+  }
+  
+  .nav-links {
+    gap: 1.5rem;
+  }
+  
+  .nav-links a {
+    font-size: 16px;
+  }
+  
+  .product-wrapper {
+    padding: 1rem;
+  }
+  
+  .Heading {
+    font-size: 2rem;
+  }
+  
+  .description p {
+    font-size: 1rem;
+  }
+  
+  .Pricing p {
+    font-size: 2rem;
+  }
+  
+  .Bulletpoints {
+    padding: 1.5rem;
+  }
+  
+  .footer {
+    padding: 1.5rem 1rem;
+  }
+  
+  .footer p {
+    font-size: 0.9rem;
+  }
+}
